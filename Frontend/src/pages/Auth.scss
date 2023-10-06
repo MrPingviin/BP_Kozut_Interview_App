@@ -1,0 +1,60 @@
+@use "../templates/mixins.scss" as Mixins;
+@use "../templates/colors.scss" as *;
+
+
+.AuthPage {
+    @include Mixins.FullPageSize();
+    @include Mixins.Flex(column, center, center, 0rem, nowrap);
+}
+
+
+.AuthPage__Container {
+    max-width: 30%;
+}
+
+.AuthPage__Container__Content {
+    @include Mixins.Flex(column, center, center, 1.5rem, nowrap);
+    background-color: $White;
+    border: 0.20rem solid $Green;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+
+    &>button {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        font-size: 1.2rem;
+        background-color: $DarkerWhite;
+    }
+
+    &>hr {
+        width: 90%;
+    }
+
+    &>span {
+        text-align: center;
+    }
+}
+
+.CompanyLogo {
+    z-index: 1;
+    background-color: $Gray;
+    border: 0.20rem solid $Green;
+    border-bottom: none;
+}
+
+.ErrorMassiveBackground {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .AuthPage__Container {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../templates/mixins.scss" as Mixins;
+@use "../templates/colors.scss" as *;
+
+.HomePage {
+    @include Mixins.FullPageSize();
+    @include Mixins.Flex(row, center, center, 0rem, nowrap);
+}
+
+.HomePage__Container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $DarkerWhite;
+    border-radius: 0.25rem;
+}

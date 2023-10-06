@@ -1,0 +1,7 @@
+@use "../templates/mixins.scss" as Mixins;
+@use "../templates/colors.scss" as *;
+
+.NewsCreatorPage {
+    background-color: $DarkerWhite;
+    min-height: 100dvh;
+}

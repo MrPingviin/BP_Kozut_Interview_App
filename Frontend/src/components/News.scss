@@ -1,0 +1,24 @@
+@use "../templates/mixins.scss" as Mixins;
+@use "../templates/colors.scss" as *;
+
+.News {
+    @include Mixins.Flex(column, flex-start, flex-start, 1rem, nowrap);
+    min-height: 70vh;
+    width: 100%;
+    padding: 1rem;
+}
+
+.TitleSection {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.NewsSection {
+    min-width: 50rem;
+    max-width: 65%;
+}
+
+.NewsSection__Container {
+    @include Mixins.Flex(column, flex-start, flex-start, 1rem, nowrap);
+}

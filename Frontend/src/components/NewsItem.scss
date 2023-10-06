@@ -1,0 +1,81 @@
+@use "../templates/mixins.scss" as Mixins;
+@use "../templates/colors.scss" as *;
+
+
+.NewsItem {
+    @include Mixins.Flex(column, flex-start, flex-start, 0rem, nowrap);
+    background-color: $White;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.75);
+    position: relative;
+}
+
+.EditorBar {
+    @include Mixins.Flex(row, space-between, center, 1rem, nowrap);
+    width: 100%;
+    padding: 0.5rem;
+    background-color: $Green;
+    color: $White;
+}
+
+.EditorBar__Options {
+    @include Mixins.Flex(row, flex-start, center, 1rem, nowrap);
+}
+
+.Divider {
+    @include Mixins.Flex(row, flex-start, flex-start, 1rem, nowrap);
+}
+
+.NewsItem__ImageSection {
+    @include Mixins.Flex(row, center, center, 0rem, nowrap);
+    width: 100%;
+    position: relative;
+    min-height: 20rem;
+    min-width: 35rem;
+}
+
+.NewsItem__Image {
+    height: 100%;
+    width: 100%;
+    min-height: 20rem;
+}
+
+.NewsItem__ContentSection {
+    @include Mixins.Flex(column, space-between, flex-start, 0.5rem, wrap);
+    min-height: 20rem;
+    min-width: 45rem;
+    width: 100%;
+    display: flex;
+    word-break: break-word;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.NewsItem__ContentSection__Content {
+    @include Mixins.Flex(column, flex-start, flex-start, 0.5rem, wrap);
+    width: 100%;
+}
+
+.NewsItem__Footer {
+    @include Mixins.Flex(row, space-between, center, 0.5rem, nowrap);
+    width: 100%;
+}
+
+.NewsItem__Footer__Edited {
+    @include Mixins.Flex(column, flex-start, flex-start, 0.5rem, nowrap);
+}
+
+@media screen and (max-width: 1500px) {
+    .NewsItem {
+        flex-wrap: wrap;
+    }
+
+    .NewsItem__ImageSection {
+        width: 100%;
+    }
+
+    .NewsItem__Image {
+        width: 100%;
+    }
+}

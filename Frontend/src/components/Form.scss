@@ -1,0 +1,69 @@
+@use "../templates/mixins.scss" as Mixins;
+@use "../templates/colors.scss" as *;
+
+.NewsForm {
+    @include Mixins.Flex(column, center, center, 1rem, nowrap);
+    padding: 1rem 0rem;
+
+    &>h1 {
+        font-size: 2rem;
+    }
+}
+
+body {
+    background-color: $DarkerWhite;
+}
+
+.form {
+    @include Mixins.Flex(column, center, center, 0.5rem, nowrap);
+
+
+    &>input,
+    &>textarea,
+    &>button[type="submit"] {
+        padding: 0.25rem 0.25rem;
+        border-radius: 0.25rem;
+        border: 0.25rem solid $Green;
+    }
+
+    &>input[type="file"] {
+        border: none;
+        padding: 0rem;
+    }
+
+    &>label {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $Dark;
+    }
+
+    &>button[type="submit"] {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        background-color: $Green;
+        color: $White;
+    }
+}
+
+.ErrorMessage,
+.SuccessMessage,
+.UploadingMessage {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.ErrorMessage {
+    color: $White;
+    background-color: $Tomato;
+}
+
+.SuccessMessage {
+    @include Mixins.Flex(column);
+    color: $White;
+    background-color: $LightGreen;
+}
+
+.UploadingMessage {
+    color: $Dark;
+}
