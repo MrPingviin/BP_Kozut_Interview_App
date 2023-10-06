@@ -1,14 +1,14 @@
-## Intranet App
+# Intranet App
 This is a fictive intranet software. Regular users able to browse the company news, editors to create, edit and delete those. 
 
-####Used technologies:
+## Used technologies:
 - Javascript
 - NodeJS ( https://nodejs.org/ )
 - Express ( https://expressjs.com/ )
 - MongoDB ( https://www.mongodb.com/ )
 - Google API ( https://developers.google.com/ )
 
-###How to run the project on localhost
+## How to run the project on localhost
 #### npm install
 Both in the Frontend and Backend folder
 #### npm start
