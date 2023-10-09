@@ -1,0 +1,57 @@
+openapi: 3.0.0
+servers: []
+info:
+  description: This is a simple API
+  version: "1.0.0"
+  title: Budapest Közút Intranet App - API Dokumentáció
+  contact:
+    email: foldimogyoro2000@gmail.com
+  license:
+    name: Apache 2.0
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+tags:
+  - name: Auth
+    description: User authentication with Google
+paths:
+  /google/callback:
+    post:
+      tags:
+        - Auth
+      summary: Google OAuth2 callback
+      operationId: googleauth
+      description: |
+        This endpoint is called by Google after the user has authenticated.
+        If the user has successfully authenticated, the user's profile is stored in the database also the user is redirected to the frontend.
+        Plus the Google ID is getting stored in the client browser's localstorage as well under the googleID key.
+      responses:
+        "500":
+          description: If the user has not successfully authenticated
+        "200":
+          description: If the user has successfully authenticated & the user's profile is successfully stored in the database
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - firstName
+        - lastName
+        - avatarURL
+        - registeredAt
+        - isEditor
+      properties:
+        firstName:
+          type: string
+          example: "Elek"
+        lastName:
+          type: string
+          example: "Teszt"
+        avatarURL:
+          type: string
+          example: "https://lh3.googleusercontent.com/a/ACg8ocIww9FGNrTUGRbhXIxbLSv2B_y9e2DKlcuTDm-4sefC6VU=s96-c"
+        registeredAt:
+          type: string
+          format: date-time
+          example: "2016-08-29T09:12:33.001Z"
+        isEditor:
+          type: boolean
+          example: true

@@ -23,4 +23,5 @@ The backend by default runs on the port 3000, changeable in the .env
 
 
 #### Docs, Tests
-WIP - Coming soon.
+(WIP) Swagger documentation: https://app.swaggerhub.com/apis/foldimogyoro2000/BP_KozutApp/1.0.0#/ 
+Tests - WIP.
