@@ -38,12 +38,12 @@
 .NewsItem__Image {
     height: 100%;
     width: 100%;
-    min-height: 20rem;
+    height: 25rem;
 }
 
 .NewsItem__ContentSection {
     @include Mixins.Flex(column, space-between, flex-start, 0.5rem, wrap);
-    min-height: 20rem;
+    height: 25rem;
     min-width: 45rem;
     width: 100%;
     display: flex;

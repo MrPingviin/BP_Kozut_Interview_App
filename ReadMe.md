@@ -16,12 +16,15 @@ In the Backend folder
 #### npm run dev
 In the Frontend folder
 
+## How to run the unit tests
+#### npm test
+In the Backend folder - Status: WIP
+
 #### http://localhost:5173/
 Live demo link of the frontend
 #### http://localhost:3000/
 The backend by default runs on the port 3000, changeable in the .env
 
 
-#### Docs, Tests
-(WIP) Swagger documentation: https://app.swaggerhub.com/apis/foldimogyoro2000/BP_KozutApp/1.0.0#/ <br />
-Tests - WIP.
+#### Documentation
+(WIP) Swagger documentation: https://app.swaggerhub.com/apis/foldimogyoro2000/BP_KozutApp/1.0.0#/ 

@@ -1,9 +1,9 @@
 openapi: 3.0.0
 servers: []
 info:
-  description: This is a simple API
+  description: Work in progress - API documentation made for Budapest Közút's interview application. The project's repo is available on the following link - https://github.com/MrPingviin/BP_Kozut_Interview_App
   version: "1.0.0"
-  title: Budapest Közút Intranet App - API Dokumentáció
+  title: Budapest Közút Intranet App - API Documentation
   contact:
     email: foldimogyoro2000@gmail.com
   license:
@@ -38,6 +38,9 @@ components:
         - avatarURL
         - registeredAt
         - isEditor
+        - email
+        - googleID
+        - locale
       properties:
         firstName:
           type: string
@@ -55,3 +58,13 @@ components:
         isEditor:
           type: boolean
           example: true
+        email:
+          type: string
+          example: "tesztelek@gmail.com"
+        googleID:
+          type: string
+          format: date-time
+          example: "103223536266747647546858595695"
+        locale:
+          type: string
+          example: "hu"

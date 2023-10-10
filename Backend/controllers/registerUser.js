@@ -1,6 +1,7 @@
 import User from "../models/user.js"
 
 const registerUser = async (response) => {
+    let isUserExist = false;
     try {
         const newUser = new User({
             firstName: response.given_name,
@@ -13,7 +14,21 @@ const registerUser = async (response) => {
             locale: response.locale
         });
 
-        const savedUser = await newUser.save();
+        const findUser = await User.find({
+            googleID: response.sub
+        }).exec();
+        
+
+        if (findUser.length != 0) {
+            isUserExist = true;
+        }
+
+        if (!isUserExist) {
+            await newUser.save();
+            return true;
+        } else {
+            return false;
+        }
     } catch (error) {
         response.status(500).json({ message: error.message });
     }
